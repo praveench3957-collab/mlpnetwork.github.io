@@ -1,0 +1,84 @@
+﻿<section id="contact">
+  <h2 class="section-title">Book Your Package Now</h2>
+  <p class="section-subtitle">Complete the form for instant booking confirmation. Secure payments via UPI, cards & net banking for Hyderabad customers.</p>
+  <div class="contact-grid">
+    <div>
+      <h3>Booking Form</h3>
+      <form id="bookingForm">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required />
+
+
+        <label for="phone">Mobile (WhatsApp) *</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91-98XXXXXXX" required />
+
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+
+
+        <label for="package">Select Package *</label>
+        <select id="package" name="package" onchange="calculateAdvance()" required>
+          <option value="">Choose package</option>
+          <option value="goa" data-price="15999">Hyderabad-Goa (₹15,999)</option>
+          <option value="kashmir" data-price="29999">Hyderabad-Kashmir (₹29,999)</option>
+          <option value="kerala" data-price="24999">Hyderabad-Kerala (₹24,999)</option>
+          <option value="singapore" data-price="45999">Singapore-Malaysia (₹45,999)</option>
+          <option value="dubai" data-price="33999">Dubai Getaway (₹33,999)</option>
+          <option value="thailand" data-price="28999">Thailand Tour (₹28,999)</option>
+          <option value="custom">Custom Package</option>
+        </select>
+
+
+        <label for="travellers">No. of Travellers *</label>
+        <input type="number" id="travellers" name="travellers" min="1" max="20" value="2" onchange="calculateAdvance()" required />
+
+
+        <label for="travel-date">Preferred Start Date</label>
+        <input type="date" id="travel-date" name="travel-date" />
+
+
+        <label for="advance-amount">Advance Payment (20%)</label>
+        <input type="text" id="advance-amount" name="advance" readonly placeholder="₹0" />
+
+
+        <label for="message">Special Requests</label>
+        <textarea id="message" name="message" rows="3" placeholder="Visa help, hotel preferences, dietary needs..."></textarea>
+
+
+        <button type="submit">Confirm Booking & Pay Advance</button>
+      </form>
+
+
+      <!-- Payment Buttons (Replace with your Razorpay/Paytm keys) -->
+      <div id="payment-options" style="margin-top: 20px; display: none;">
+        <h4>Pay Securely (Hyderabad Customers)</h4>
+        <p style="font-size: 13px; color: #666;">UPI, Cards, Netbanking, Wallets supported</p>
+        <button type="button" id="razorpay-btn" class="pay-btn" style="background: #00bcd4; margin-right: 10px;">Pay with Razorpay</button>
+        <button type="button" id="paytm-btn" class="pay-btn" style="background: #ff9800;">Pay with Paytm</button>
+        <p style="font-size: 12px; margin-top: 8px; color: #777;">
+          <strong>Or</strong> Pay full via Bank Transfer / Visit Office<br>
+          A/c: MLP Network | IFSC: SBIN000XXXX | UPI: mlpnetwork@paytm
+        </p>
+      </div>
+    </div>
+    <div>
+      <h3>Payment & Office Details</h3>
+      <p><strong>MLP Network – Travel Agency</strong></p>
+      <p>Hyderabad, Telangana, India<br>RGIA Airport: 25 mins drive</p>
+      <p>Phone: +91-XXXXXXXXXX (24x7)</p>
+      <p>Email: bookings@mlpnetwork.com</p>
+      <p class="tagline">✅ Instant WhatsApp confirmation<br>✅ EMI available on select packages<br>✅ Cancel anytime (T&C)</p>
+      
+      <div style="margin-top: 20px; padding: 15px; background: #e8f5e8; border-radius: 6px;">
+        <h4>Popular Payment Methods</h4>
+        <ul style="font-size: 13px; margin-left: 0;">
+          <li>• UPI (Google Pay, PhonePe, Paytm)</li>
+          <li>• Cards (Visa/Mastercard/RuPay)</li>
+          <li>• Net Banking (All major banks)</li>
+          <li>• Wallets & No-Cost EMI</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
